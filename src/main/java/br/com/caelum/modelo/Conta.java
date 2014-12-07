@@ -10,93 +10,128 @@ import javax.persistence.Version;
 import java.lang.Override;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Date;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.Past;
 
 @Entity
 @XmlRootElement
-public class Conta implements Serializable {
+public class Conta implements Serializable
+{
 
-	private static final long serialVersionUID = 1L;
+   private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id", updatable = false, nullable = false)
-	private Long id;
-	@Version
-	@Column(name = "version")
-	private int version;
+   @Id
+   @GeneratedValue(strategy = GenerationType.AUTO)
+   @Column(name = "id", updatable = false, nullable = false)
+   private Long id;
+   @Version
+   @Column(name = "version")
+   private int version;
 
-	@Column
-	@NotNull
-	private String numero;
+   @Column
+   @NotNull
+   private String numero;
 
-	@Column
-	@NotNull
-	private String agencia;
+   @Column
+   @NotNull
+   private String agencia;
 
-	public Long getId() {
-		return this.id;
-	}
+   @Column
+   @Temporal(TemporalType.DATE)
+   @Past
+   private Date dataAbertura;
 
-	public void setId(final Long id) {
-		this.id = id;
-	}
+   public Long getId()
+   {
+      return this.id;
+   }
 
-	public int getVersion() {
-		return this.version;
-	}
+   public void setId(final Long id)
+   {
+      this.id = id;
+   }
 
-	public void setVersion(final int version) {
-		this.version = version;
-	}
+   public int getVersion()
+   {
+      return this.version;
+   }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (!(obj instanceof Conta)) {
-			return false;
-		}
-		Conta other = (Conta) obj;
-		if (id != null) {
-			if (!id.equals(other.id)) {
-				return false;
-			}
-		}
-		return true;
-	}
+   public void setVersion(final int version)
+   {
+      this.version = version;
+   }
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
-	}
+   @Override
+   public boolean equals(Object obj)
+   {
+      if (this == obj)
+      {
+         return true;
+      }
+      if (!(obj instanceof Conta))
+      {
+         return false;
+      }
+      Conta other = (Conta) obj;
+      if (id != null)
+      {
+         if (!id.equals(other.id))
+         {
+            return false;
+         }
+      }
+      return true;
+   }
 
-	public String getNumero() {
-		return numero;
-	}
+   @Override
+   public int hashCode()
+   {
+      final int prime = 31;
+      int result = 1;
+      result = prime * result + ((id == null) ? 0 : id.hashCode());
+      return result;
+   }
 
-	public void setNumero(String numero) {
-		this.numero = numero;
-	}
+   public String getNumero()
+   {
+      return numero;
+   }
 
-	public String getAgencia() {
-		return agencia;
-	}
+   public void setNumero(String numero)
+   {
+      this.numero = numero;
+   }
 
-	public void setAgencia(String agencia) {
-		this.agencia = agencia;
-	}
+   public String getAgencia()
+   {
+      return agencia;
+   }
 
-	@Override
-	public String toString() {
-		String result = getClass().getSimpleName() + " ";
-		if (numero != null && !numero.trim().isEmpty())
-			result += "numero: " + numero;
-		if (agencia != null && !agencia.trim().isEmpty())
-			result += ", agencia: " + agencia;
-		return result;
-	}
+   public void setAgencia(String agencia)
+   {
+      this.agencia = agencia;
+   }
+
+   public Date getDataAbertura()
+   {
+      return dataAbertura;
+   }
+
+   public void setDataAbertura(Date dataAbertura)
+   {
+      this.dataAbertura = dataAbertura;
+   }
+
+   @Override
+   public String toString()
+   {
+      String result = getClass().getSimpleName() + " ";
+      if (numero != null && !numero.trim().isEmpty())
+         result += "numero: " + numero;
+      if (agencia != null && !agencia.trim().isEmpty())
+         result += ", agencia: " + agencia;
+      return result;
+   }
 }

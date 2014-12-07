@@ -24,6 +24,13 @@
         </div>
     </div>
 
+	<div class="form-group" ng-class="{'has-error': ContaForm.dataAbertura.$invalid}">
+        <label for="dataAbertura" class="col-sm-2 control-label">Data de Abertura</label>
+        <div id="dataAberturaControls" class="col-sm-10">
+            <date id="dataAbertura" name="dataAbertura" ng-model="conta.dataAbertura" placeholder="Informe a data de abertura (dd/MM/yyyy)"></date>
+            <span class="help-block error" ng-show="ContaForm.dataAbertura.$error.dateFormat">utilize o formato "dd/MM/yyyy" (ex: 01/12/2013)</span>
+        </div>
+    </div>
 
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
