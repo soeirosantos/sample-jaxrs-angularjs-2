@@ -2,7 +2,7 @@
 
 ### Entendendo a aplicação
 
-**Visão geral:** Todas as funcionalidades da aplicação estão implementadas no browser utilizando o MVC client-side **AngularJS**. Neste exemplo, o backend, escrito em Java com **JAX-RS**, está sendo utilizado somente como um provedor de dados. Observe que o backend também possui validações que impedem a gravação de dados em estado indevido e é muito comum manter regras de negócio sensíveis no lado do servidor.
+**Visão geral:** Todas as funcionalidades da aplicação estão implementadas para rodar no browser, utilizando o MVC client-side **AngularJS**. Neste exemplo, o backend escrito em Java com **JAX-RS** está sendo utilizado somente como um provedor de dados, com validações que impedem a gravação de dados em estado indevido. Em aplicaçẽs com esse estilo é muito comum manter, também, regras de negócio sensíveis implementadas no lado do servidor.
 
 
 **1)** Faça download do código para a sua máquina: `git clone https://github.com/soeirosantos/sample-jaxrs-angularjs-2.git`
