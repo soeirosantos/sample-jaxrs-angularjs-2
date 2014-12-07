@@ -1,0 +1,35 @@
+<header ng-switch on="$location.path().indexOf('/conta/new') > -1">
+    <h3 ng-switch-when="true">Nova Conta</h3>
+    <h3 ng-switch-when="false">Editar Conta</h3>
+</header>
+<form id="ContaForm" name="ContaForm" class="form-horizontal" role="form" novalidate="novalidate">
+    <div ng-show="displayError" class="alert alert-danger">
+        <strong>Erro!</strong> Um erro ocorreu, experimente verificar o console JavaScript do browser
+    </div>
+    
+
+    <div class="form-group" ng-class="{'has-error': ContaForm.numero.$invalid}">
+        <label for="numero" class="col-sm-2 control-label">Número</label>
+        <div id="numeroControls" class="col-sm-10">
+            <input id="numero" name="numero" type="text" required class="form-control" ng-model="conta.numero" placeholder="Informe o número da conta"></input>
+            <span class="help-block error" ng-show="ContaForm.numero.$error.required">obrigatório</span> 
+        </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error': ContaForm.agencia.$invalid}">
+        <label for="agencia" class="col-sm-2 control-label">Agência</label>
+        <div id="agenciaControls" class="col-sm-10">
+            <input id="agencia" name="agencia" type="text" required class="form-control" ng-model="conta.agencia" placeholder="Informe a agência"></input>
+            <span class="help-block error" ng-show="ContaForm.agencia.$error.required">obrigatório</span> 
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button id="saveConta" name="saveConta" class="btn btn-primary" ng-disabled="isClean() || ContaForm.$invalid" ng-click="save()"><span class="glyphicon glyphicon-ok-sign"></span> Gravar</button>
+            <button id="cancel" name="cancel" class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove-sign"></span> Cancelar</button>
+            <button id="deleteConta" name="deleteConta" class="btn btn-danger" ng-show="conta.id" ng-click="remove()"><span class="glyphicon glyphicon-trash"></span> Excluir</button>
+        </div>
+    </div>
+</form>
