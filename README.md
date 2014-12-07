@@ -49,11 +49,11 @@ angular.module('angularjaxrs').controller('EditContaController', function($scope
 ```
 Desses parâmetros destacamos o `$scope`, que é utilizado para acessar os elementos referenciados na view, e o `ContaResource`, que é utilizado para abstrair a comunicação com a API Rest.
 
-A ligação que ocorre entre o `$scope` e os elementos da view é uma ligação de mão-dupla, ou seja, toda alteração realizada na view é refletida no controller e, por sua vez, toda alteração em uma variável no controller é automaticamente atualizada na view. Esse processo é conhecido como *two way data binding*.
+A ligação que ocorre entre o `$scope` e os elementos da view é uma ligação de mão-dupla, ou seja, toda alteração realizada na view é refletida no controller e, por sua vez, toda alteração em uma variável no controller é automaticamente atualizada na view. Esse processo é conhecido como **two way data binding**.
 
 **6**) Abra o arquivo `src/main/webapp/scripts/services/ContaFactory.js` para ver como configuramos o ContaResource. Para isso estamos utilizando o módulo `resource` do AngularJS, que implementa funcionalidades que abstraem e facilitam a comunicação com a API Rest.
 
-**Dica:** Embora o módulo `resource` seja *padrão* do AngularJS e possua funcionalidades bem interessantes, se você for implementar uma aplicação AngularJS você deveria avaliar, também, o plugin `restangular` - um substituto de peso ao `resource`.
+**Dica:** Embora o módulo `resource` seja padrão do AngularJS e possua funcionalidades bem interessantes, se você for implementar uma aplicação AngularJS você deveria avaliar, também, o plugin `restangular` - um substituto de peso ao `resource`.
 
 **7**) Em `src/main/webapp/scripts/directives` e `src/main/webapp/scripts/filters` nós implementamos alguns recursos um pouco mais avançados de Angular. No arquivo `datapicker.js` nós temos nossa própria diretiva que pode ser utilizada para tratar campos de datas.
 
