@@ -9,20 +9,20 @@
 
 **2)** Abra o arquivo `src/main/webapp/scripts/app.js`. Este arquivo confiugra nossa aplicação AngularJS com o nome `angularjaxrs`. Estamos associando nossa aplicação a dois módulos do Angular: `route` e `resource`.
 
-Ainda no arquivo app.js, observe como estamos configurando nossas rotas para as views correspondentes. Esse tipo de roteamente realizado no browser é uma funcionalidade básica de qualquer MVC client-side, uma vez que não iremos ao servidor para renderizar novas páginas, alguém precisa ficar responsável por isso.
+Ainda no arquivo `app.js`, observe como estamos configurando nossas rotas para as views correspondentes. Esse tipo de roteamente realizado no browser é uma funcionalidade básica de qualquer MVC client-side, uma vez que não iremos ao servidor para renderizar novas páginas, alguém precisa ficar responsável por isso.
 
 Repare, ainda, que cada view está associada a um Controller. Essa configuração é importante, pois é através dela que acontece a ligação, de forma totalmente transparente, entre os dados da view e as funcionalidades implementadas no Controller. Mas sobre isso em instantes.
 
-Por fim, nós temos um Controller (o `NavController`) que não está ligado a view nenhuma, ele simplesmente gerencia o comportamento do menu de navegação.
+Por fim, nós temos um Controller que não está associado a view nenhuma (o `NavController`), ele simplesmente gerencia o comportamento do menu de navegação, como veremos abaixo.
 
-**3)** Agora, abra o arquivo  `src/main/webapp/app.html`. Este arquivo é raiz da nossa aplicação. Durante todo o tempo somente este arquivo ficará aberto no browser e as views e comportamentos da tela serão alterados dinamicamente através da configuração que vimos anteriormente.
+**3)** Agora, abra o arquivo  `src/main/webapp/app.html`. Este arquivo é a raiz da nossa aplicação. Durante todo o tempo somente este arquivo ficará aberto no browser e as views e comportamentos de tela serão alterados dinamicamente pelo Angular.
 
 Na tag `<html>` vinculamos nossa aplicação Angular ao arquivo `app.html` através da *diretiva* `ng-app`
 ```html
     <html lang="en" ng-app="angularjaxrs">
 ```
 
-Através do roteamento que configuramos nossas views serão exbidas na `div#main`:
+Através do roteamento que configuramos, nossas views serão exbidas na `div#main`:
 ```html
 <div id="main" ng-view>
 </div>
