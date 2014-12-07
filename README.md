@@ -55,7 +55,7 @@ A ligação que ocorre entre o `$scope` e os elementos da view é uma ligação 
 
 **Dica:** Embora o módulo `resource` seja *padrão* do AngularJS e possua funcionalidades bem interessantes, se você for implementar uma aplicação AngularJS você deveria avaliar, também, o plugin `restangular` - um substituto de peso ao `resource`.
 
-**7**) Em `src/main/webapp/scripts/directives` e `src/main/webapp/scripts/filters` nós implementamos alguns recursos um pouco mais avançados de Angular. No arquivo `datapicker.js` nós temos nossa própria diretiva que pode ser utilizada para tratar o campos de datas.
+**7**) Em `src/main/webapp/scripts/directives` e `src/main/webapp/scripts/filters` nós implementamos alguns recursos um pouco mais avançados de Angular. No arquivo `datapicker.js` nós temos nossa própria diretiva que pode ser utilizada para tratar campos de datas.
 
 ### Como rodar a aplicação
 
@@ -63,4 +63,4 @@ Para executar a aplicação basta importar o projeto no eclipse como um projeto 
 
 ### Considerações finais
 
-O setup e o esqueleto desta aplicação foi feito com o JBoss Forge, utilizando o plugin para AngularJS. Realizei algumas customizações e melhorias pontuais, com modificações mais significativas na diretiva datapicker.
+O setup e o esqueleto desta aplicação foi feito com o **JBoss Forge**, utilizando o plugin para AngularJS. Realizei algumas customizações e melhorias pontuais, com modificações mais significativas na diretiva datapicker.
