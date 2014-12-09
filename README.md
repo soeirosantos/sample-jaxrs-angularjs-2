@@ -11,7 +11,7 @@
 
 Ainda no arquivo `app.js`, observe como estamos configurando nossas rotas para as views correspondentes. Esse tipo de roteamente realizado no browser é uma funcionalidade básica de qualquer MVC client-side, uma vez que não iremos ao servidor para renderizar novas páginas, alguém precisa ficar responsável por isso.
 
-Repare, ainda, que cada view está associada a um Controller. Essa configuração é importante, pois é através dela que acontece a ligação, de forma totalmente transparente, entre os dados da view e as funcionalidades implementadas no Controller. Mas sobre isso em instantes.
+Repare, ainda, que cada view está associada a um Controller. Essa configuração é importante, pois é através dela que acontece a ligação, de forma totalmente transparente, entre os dados da view e as funcionalidades implementadas no Controller. Mais sobre isso em instantes.
 
 Por fim, nós temos um Controller que não está associado a view nenhuma (o `NavController`), ele simplesmente gerencia o comportamento do menu de navegação, como veremos abaixo.
 
